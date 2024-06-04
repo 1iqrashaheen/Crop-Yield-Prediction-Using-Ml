@@ -6,6 +6,7 @@ import logging
 
 print(sklearn.__version__)
 
+
 try:
     # Loading models
     dtr = pickle.load(open('dtr.pkl', 'rb'))
@@ -54,7 +55,7 @@ def predict():
 def croprecommendationaction():
     try:
         if request.method == 'POST':
-            logging.info("Hi Im here")
+            # logging.info("Hi Im here")
             N = request.form.get('Nitrogen')
             P = request.form.get('Phosphorus')
             K = request.form.get('Potassium')
